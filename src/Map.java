@@ -4,7 +4,7 @@ import processing.core.PApplet;
 
 public class Map {
 	public PApplet p;
-	public Player player;
+	public ArrayList<Player> player;
 	private ArrayList<Enemy> enemies;
 	private int w, h;
 	private int score;
@@ -13,8 +13,8 @@ public class Map {
 		this.p = p;
 		this.w = w;
 		this.h = h;
-//		enemies = new ArrayList<Enemy>();
-//		alliedProjectiles = new ArrayList<Projectile>();
+		enemies = new ArrayList<Enemy>();
+		player = new ArrayList<Player>();
 		
 		
 	}

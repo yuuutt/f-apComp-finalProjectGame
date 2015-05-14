@@ -19,7 +19,6 @@ public class Main extends PApplet implements KeyListener, MouseMotionListener{
 	Color weirdColor;
     Color bgColor;
     Image offImage;
-    Graphics mouseSpace1, mouseSpace2;
     Graphics offGraphics;
     
     protected int currentMouseX, currentMouseY;
@@ -28,13 +27,14 @@ public class Main extends PApplet implements KeyListener, MouseMotionListener{
     double dir, trueing = 0;
     Map map;
     boolean gameStart = false;
+    
 
     public void init() { 
     	setSize(600, 600);
     	addKeyListener(this);
         addMouseMotionListener(this);
        
-//    	map = new Map(this, 600, 600);
+    	map = new Map(this, 600, 600);
     	bigFont = new Font("Times New Roman", Font.BOLD, 16);
     	bgColor = Color.white;
     	setBackground(bgColor);
@@ -56,17 +56,11 @@ public class Main extends PApplet implements KeyListener, MouseMotionListener{
     	if (offGraphics == null) {
     		offImage = createImage(800,600);
     		offGraphics = offImage.getGraphics();
-    		mouseSpace1 = offImage.getGraphics();
-    		mouseSpace2 = offImage.getGraphics();
+    		
     	}
 
     	offGraphics.setColor(Color.WHITE);
     	offGraphics.fillRect(0,0,800,600);
-    	
-    	mouseSpace1.setColor(Color.RED);
-    	mouseSpace1.fillRect(0, 475, 125, 125);
-    	mouseSpace2.setColor(Color.RED);
-    	mouseSpace2.fillRect(475, 475, 125, 125);
 
     	Graphics2D g2d = (Graphics2D)offGraphics;
     	offGraphics.setColor(Color.BLACK);
