@@ -19,9 +19,10 @@ public class Map {
 		
 	}
 	
-	public boolean isGameOver(){
-		return !player.exists();
-	}
+//	public boolean isGameOver(){
+//		if(exists) 
+//		return !player.exists();
+//	}
 
 	public int getWidth(){
 		return w;
@@ -35,9 +36,9 @@ public class Map {
 		enemies.add(e);
 	}
 	
-	public void setPlayer(PApplet p, Location l, Map m){
-		player = new Player(p, l, m);
-	}
+//	public void setPlayer(PApplet p, Location l, Map m){
+//		player = new Player(p, l, m);
+//	}
 
 	public void remove(Entity e){
 		enemies.remove(e);

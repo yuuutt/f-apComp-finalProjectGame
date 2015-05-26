@@ -34,7 +34,7 @@ public class Main extends PApplet implements KeyListener, MouseMotionListener{
     	addKeyListener(this);
         addMouseMotionListener(this);
        
-    	map = new Map(this, 600, 600);
+//    	map = new Map(this, 600, 600);
     	bigFont = new Font("Times New Roman", Font.BOLD, 16);
     	bgColor = Color.white;
     	setBackground(bgColor);
