@@ -9,13 +9,9 @@ public abstract class Entity extends PApplet{
 	protected Location l; //current location
 	private double radius; //used for hitboxes
 	private boolean exists;
-	private double x;
-	private double y;
 	private Color color;
     private double velocityX;
     private double velocityY;
-	private int low;
-	private int high;
 	
 	public Entity(PApplet p, Location l, Map m, double radius, double velocityX, double velocityY, Color color){
 		this.p = p;
@@ -28,45 +24,31 @@ public abstract class Entity extends PApplet{
 	}
 	
 	public Color getColor() {
-	
 	    return color;
-
 	}
 
 	public void setColor(Color color) {
-
 	    this.color = color;
-
 	}
 
 	public double getVelocityX() {
-	
 	    return velocityX;
-	
 	}
 	
 	public void setVelocityX(double velocityX) {
-	
 	    this.velocityX = velocityX;
-	
 	}
 	
 	public double getVelocityY() {
-	
 	    return velocityY;
-	
 	}
 	
 	public void setVelocityY(double velocityY) {
-	
 	    this.velocityY = velocityY;
-	
 	}
 	
 	public void setCollided(){
-	
 	    setColor(Color.RED);
-	
 	}
 	 
 	

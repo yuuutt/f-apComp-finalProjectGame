@@ -16,7 +16,6 @@ public class Map {
 		enemies = new ArrayList<Enemy>();
 		player = new ArrayList<Player>();
 		
-		
 	}
 	
 //	public boolean isGameOver(){

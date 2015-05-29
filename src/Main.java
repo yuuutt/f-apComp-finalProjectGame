@@ -5,6 +5,7 @@ import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
+import java.awt.Shape;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
@@ -20,7 +21,7 @@ public class Main extends PApplet implements KeyListener, MouseMotionListener{
     Color bgColor;
     Image offImage;
     Graphics offGraphics;
-    
+    Location loc;
     protected int currentMouseX, currentMouseY;
     protected int previousMouseX, previousMouseY;
     protected int xx=100,yy=450,w=400,l=30;
@@ -47,9 +48,9 @@ public class Main extends PApplet implements KeyListener, MouseMotionListener{
     }
 
     public void paint(Graphics g) { 
-    	
-    	update(g);
-	    
+    
+    	 update(g);
+    	 
     }
     
     public void update(Graphics g) {
@@ -70,23 +71,20 @@ public class Main extends PApplet implements KeyListener, MouseMotionListener{
     	int ry = yy+ (l/2);
     	g2d.rotate(dir,rx,ry);
     	g2d.draw(new Rectangle(xx, yy, w, l));
+    	
+    	
 
     	offGraphics.setColor(getForeground());
     	g.drawImage(offImage, 0, 0, this);
+    	
     }
     
     public void mouseMoved(MouseEvent e){
     	currentMouseX=e.getX();
         currentMouseY=e.getY();
-        
-        showStatus( "Mouse at (" + currentMouseX + "," + currentMouseY + ")" );
-        
-        	if(currentMouseY > yy) {
-        		dir = Math.toRadians(Math.atan2(previousMouseY-currentMouseY, previousMouseX-currentMouseY)/2*Math.PI);
-        	} else {
-        		dir = Math.toRadians(Math.atan2(currentMouseY-previousMouseY, currentMouseX-previousMouseY)/2*Math.PI);
-        	}
-
+        	
+        dir = Math.toRadians(Math.atan2(previousMouseY-currentMouseY, previousMouseX-currentMouseY)/2*Math.PI);
+        	
         this.repaint();  
         
         previousMouseX = currentMouseX;

@@ -63,12 +63,8 @@ public class SemiPongPanel extends JApplet implements BallHandler {
 
         return rand.nextInt(high-low+1) + low;  
 
- 
-
     }
 
-
- 
 
     @Override
 
@@ -81,8 +77,6 @@ public class SemiPongPanel extends JApplet implements BallHandler {
             physics.addBall(ball);
 
         }
-
-     
 
     }
 
